@@ -2,6 +2,12 @@
 
 A Discord embedded activity where users can raise their hand to join a queue. Everyone in the activity sees the live queue. Anyone can lower anyone's hand.
 
+## Preview
+
+| Empty queue | Hand raised |
+|:-----------:|:-----------:|
+| ![Empty queue](docs/screenshot-empty.png) | ![Hand raised](docs/screenshot-queue.png) |
+
 ## Architecture
 
 ```
@@ -52,6 +58,7 @@ In dev mode (outside Discord iframe) the app auto-generates a mock user per brow
 
 - **Raise hand** — joins the end of the queue
 - **Lower hand** — anyone can remove any entry (mod-friendly)
+- **Clear all** — wipes the entire queue instantly for all participants
 - **Live queue** — all participants see changes instantly via Socket.io
 - **IndexedDB cache** — queue persists locally across page refreshes
 - **Dev fallback** — works in browser without Discord; generates mock users per tab
